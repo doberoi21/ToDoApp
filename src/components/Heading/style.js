@@ -6,7 +6,8 @@ export const style = StyleSheet.create({
   },
   headerText: {
     fontSize: 30,
-    marginLeft:20,
-    fontWeight:'bold'
+    marginLeft: 20,
+    fontWeight: 'bold',
+    fontFamily: 'Poppins-Bold',
   },
 });

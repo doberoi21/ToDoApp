@@ -36,7 +36,7 @@ const ListView = () => {
                 style={{
                   marginLeft: 10,
                   fontSize: 16,
-                  fontFamily: 'Poppins-Italics',
+                  fontFamily:'Poppins-Regular'
                 }}>
                 {item.name}
               </Text>

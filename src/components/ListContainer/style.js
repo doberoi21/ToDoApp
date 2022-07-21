@@ -4,6 +4,7 @@ export const style = StyleSheet.create({
     fontSize: 20,
     marginVertical: 3,
     marginLeft: 20,
+    fontFamily:'Poppins-SemiBold'
   },
   listContainer: {
     marginTop: 10,
