@@ -2,6 +2,7 @@ import {View, Text, FlatList} from 'react-native';
 import React from 'react';
 import {style} from './style';
 import Checkbox from '../CheckBox';
+
 const ListView = () => {
   const friends = [
     {
@@ -31,12 +32,12 @@ const ListView = () => {
           data={friends}
           renderItem={({item}) => (
             <View style={style.listView}>
-              <Checkbox />
+              <Checkbox  />
               <Text
                 style={{
                   marginLeft: 10,
                   fontSize: 16,
-                  fontFamily:'Poppins-Regular'
+                  fontFamily: 'Poppins-Regular',
                 }}>
                 {item.name}
               </Text>
