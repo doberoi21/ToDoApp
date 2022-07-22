@@ -1,10 +1,10 @@
 import {StyleSheet} from 'react-native';
 export const style = StyleSheet.create({
-  ListText: {
+  ListHead: {
     fontSize: 20,
     marginVertical: 3,
     marginLeft: 20,
-    fontFamily:'Poppins-SemiBold'
+    fontFamily: 'Poppins-SemiBold',
   },
   listContainer: {
     marginTop: 10,
@@ -25,5 +25,11 @@ export const style = StyleSheet.create({
     shadowColor: '#171717',
     shadowOpacity: 0.2,
     shadowRadius: 3,
+  },
+  ListText: {
+    marginLeft: 10,
+    fontSize: 16,
+    fontFamily: 'Poppins-Regular',
+    // textDecorationLine:'line-through'
   },
 });
