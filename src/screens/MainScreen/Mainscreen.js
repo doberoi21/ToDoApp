@@ -10,18 +10,27 @@ import FloatButton from '../../components/FloatButton';
 export class Mainscreen extends Component {
   constructor(props) {
     super(props);
-    this.state = {modalVisble: false};
+    this.state = {modalVisble: false, modalContent: '', selectedIndex: null};
   }
 
-  onButtonPress() {
+  openModal() {
     this.setState({
       modalVisble: true,
     });
   }
-  onBackDropPress() {
+
+  closeModal() {
     this.setState({
       modalVisble: false,
     });
+  }
+
+  editSelectedIndex(index) {
+    // console.log(index);
+    this.setState({
+      selectedIndex: index,
+    });
+    // console.log(this.setState);
   }
 
   render() {
@@ -29,11 +38,21 @@ export class Mainscreen extends Component {
       <SafeAreaView style={style.container}>
         <Header />
         <Heading />
-        <ListView />
-        <FloatButton onPress={this.onButtonPress.bind(this)} />
+        <ListView
+          closeModal={this.closeModal.bind(this)}
+          openModal={this.openModal.bind(this)}
+          onPress={this.editSelectedIndex.bind(this)}
+        />
+        <FloatButton onPress={this.openModal.bind(this)} />
         <Modal
           modalVisble={this.state.modalVisble}
-          onBackPress={this.onBackDropPress.bind(this)}
+          onBackPress={this.closeModal.bind(this)}
+          value={this.state.selectedIndex}
+          onModalHide={() => {
+            this.setState({
+              selectedIndex: null,
+            });
+          }}
         />
       </SafeAreaView>
     );

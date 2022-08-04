@@ -25,6 +25,7 @@ export const style = StyleSheet.create({
     shadowColor: '#171717',
     shadowOpacity: 0.2,
     shadowRadius: 3,
+    justifyContent:'space-between'
   },
   ListText: {
     marginLeft: 10,
